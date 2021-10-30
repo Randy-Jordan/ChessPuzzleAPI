@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Chess Puzzle Api</title>
+</head>
+<body>
+    <h1 class="title">Chess Puzzle API</h1>
+    <p class="guide"> Puzzles supplied by the good people of <a href="https://github.com/ornicar/lila">Lichess.org</a></p>
+    <p class="guide"> You can find the source code of this project <a href="https://github.com">Here</a></p>
+    
+    <h3 class="title">Base Endpoint</h3>
+    <p class="base endpoint">https://chesspuzzleapi.com/api</p>
+
+    <h3 class="title">Return a random puzzle.</h3>
+    <p class="endpoint">https://chesspuzzleapi.com/api/puzzle</p>
+
+    <h3 class="title">Return a random puzzle that is greater than a rating</h3>
+    <p class="guide"> If one rating parameter is supplied, they resulting puzzle rating will be greater than parameter.</p>
+    <span>Example:<p class="endpoint description">https://chesspuzzleapi.com/api/rating/1000</p>Returns a puzzle with a rating greater than 1000.</span>
+
+    <h3 class="title">Return a random puzzle that is between two ratings</h3>
+    <p class="guide"> If two rating parameters are supplied, they must be sucessive and low to high.</p>
+    <span>Example:<p class="endpoint description">https://chesspuzzleapi.com/api/between/1000/1200</p>Returns a puzzle with a rating between 1000 and 1200.</span>
+    
+    <h3 class="title">Return a random puzzle with theme</h3>
+    <span>Example:<p class="endpoint description">https://chesspuzzleapi.com/api/theme/endgame</p>Returns a puzzle with endgame theme.</span>
+
+    <h3 class="title">Valid Themes(Case Sensitive)</h3>
+    <p class="guide"> To see list of valid themes see this <a href="https://github.com/ornicar/lila/blob/master/translation/source/puzzleTheme.xml">Lichess Repo</a></p>
+
+    <h3 class="title">Nested Queries</h3>
+    <p class="guide"> Combine rating filter along with a theme filter. Rating parameters must be sucessive and from low to high. Theme and Rating parameter can be in any order.</p>
+    <span>Example:<p class="endpoint description">https://chesspuzzleapi.com/api/rating/1200/theme/advantage</p>Returns a puzzle with a rating over 1200 and a theme of advantage.</span>
+    <span>Example:<p class="endpoint description">https://chesspuzzleapi.com/api/theme/middlegame/rating/1700</p>Returns a puzzle with a theme of middlegame and rating over 1700.</span>
+    <span>Example:<p class="endpoint description">https://chesspuzzleapi.com/api/between/1000/1200/theme/endgame</p>Returns a puzzle with a rating between 1000 and 1200 and a theme of endgame.</span>
+    <span>Example:<p class="endpoint description">https://chesspuzzleapi.com/api/theme/opening/between/1000/1200</p>Returns a puzzle with a rating between 1000 and 1200 and a theme of opening.</span>
+    
+</body>
+</html>
